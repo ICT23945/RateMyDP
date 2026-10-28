@@ -324,6 +324,19 @@
       state.imageDataUrl = dataUrl;
       state.imageSelected = true;
       state.analyzed = false;
+
+      const previewImage = document.createElement('img');
+      previewImage.src = dataUrl;
+      previewImage.alt = 'Selected portrait';
+      previewImage.className = 'w-full h-full object-cover';
+
+      const replaceHint = document.createElement('span');
+      replaceHint.textContent = 'Tap to change photo';
+      replaceHint.className = 'absolute bottom-2 inset-x-2 bg-slate-900/80 text-white text-[11px] font-semibold py-1 px-2 rounded text-center';
+
+      triggerUploadBtn.className = 'w-full h-full max-h-[360px] rounded-2xl border border-slate-200 bg-slate-100 transition-all overflow-hidden relative cursor-pointer tap-highlight-none';
+      triggerUploadBtn.setAttribute('aria-label', 'Change portrait image');
+      triggerUploadBtn.replaceChildren(previewImage, replaceHint);
       
       // Update Button to enabled state
       mainActionBtn.disabled = false;
