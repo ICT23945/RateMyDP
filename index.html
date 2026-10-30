@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="">
+
   <script>
     tailwind.config = {
       theme: {
@@ -72,6 +74,7 @@
       <!-- VIEW 1: EMPTY UPLOAD STATE (Visible by default) -->
       <!-- ============================================== -->
       <div id="uploadView" class="h-full flex flex-col justify-center items-center">
+        <p id="analysisError" role="alert" class="hidden mb-3 w-full rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-center text-[11px] text-red-700"></p>
         <!-- Hidden real file input -->
         <input type="file" id="portraitFileInput" accept="image/*" class="hidden">
         
@@ -193,7 +196,7 @@
             </svg>
             <span>Copy Feedback</span>
           </button>
-          <span class="text-[10px] text-slate-400 font-mono">Gemini Vision v2.4</span>
+          <span class="text-[10px] text-slate-400 font-mono">Gemini 3.8 Flash</span>
         </div>
 
       </div>
@@ -212,7 +215,7 @@
 
       <!-- Privacy footnote -->
       <p class="text-center text-[10px] text-slate-400 mt-2 font-medium tracking-tight">
-        Zero social sharing. Analyzes photographic craft only. <br>- Charitha Chandana -
+        Sent to Gemini for analysis; not shared socially. <br>- Charitha Chandana -
       </p>
       <!--p class="text-center text-[10px] text-slate-400 mt-2 font-medium tracking-tight">
         Charitha Chandana
@@ -266,37 +269,14 @@
     const focusMetricTag = document.getElementById('focusMetricTag');
     const copyFeedbackBtn = document.getElementById('copyFeedbackBtn');
     const copyToast = document.getElementById('copyToast');
+    const analysisError = document.getElementById('analysisError');
 
-    // Default photorealistic sample portrait (data URI fallback to high-quality portrait)
+    const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
     const SAMPLE_PORTRAIT_URL = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
-
-    // Dynamic critique bank tuned to pure photography principles
-    const PHOTOGRAPHY_EVALUATIONS = [
-      {
-        score: "7.8",
-        grade: "Strong Craft",
-        light: "8.5",
-        focus: "8.2",
-        critique: "Natural directional window light produces pleasing facial contouring with organic eye catchlights. Headroom is slightly tight; raising camera height by two inches would balance the upper composition."
-      },
-      {
-        score: "8.4",
-        grade: "Exemplary",
-        light: "9.0",
-        focus: "8.8",
-        critique: "Excellent subject-to-background optical separation with subtle bokeh. Directional key light flatters facial geometry without specular highlight blowout. Eye plane is tack-sharp."
-      },
-      {
-        score: "6.9",
-        grade: "Moderate",
-        light: "6.5",
-        focus: "7.5",
-        critique: "Composition adheres well to the rule of thirds with balanced eye-line alignment. However, overhead ambient lighting casts minor dark shadows under the brows that require fill bounce."
-      }
-    ];
 
     // Trigger local device file picker
     function openFilePicker() {
+      fileInput.value = '';
       fileInput.click();
     }
 
@@ -304,26 +284,69 @@
     if (replacePhotoBtn) replacePhotoBtn.addEventListener('click', openFilePicker);
 
     // File selected handler
-    fileInput.addEventListener('change', function(e) {
+    fileInput.addEventListener('change', async function(e) {
       const file = e.target.files && e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-          applySelectedImage(event.target.result);
-        };
-        reader.readAsDataURL(file);
+      if (!file) return;
+      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+        showUploadError('Choose a JPEG, PNG, or WebP image.');
+        return;
+      }
+      if (file.size > MAX_IMAGE_BYTES) {
+        showUploadError('Choose an image smaller than 8 MB.');
+        return;
+      }
+      try {
+        applySelectedImage(await readFileAsDataUrl(file));
+      } catch (error) {
+        showUploadError(error.message);
       }
     });
 
     // Sample portrait loader
-    loadSampleBtn.addEventListener('click', function() {
-      applySelectedImage(SAMPLE_PORTRAIT_URL);
+    loadSampleBtn.addEventListener('click', async function() {
+      try {
+        const response = await fetch(SAMPLE_PORTRAIT_URL);
+        if (!response.ok) throw new Error('Could not load the sample portrait. Please upload a photo instead.');
+        const imageBlob = await response.blob();
+        if (imageBlob.size > MAX_IMAGE_BYTES) throw new Error('The sample portrait is larger than 8 MB.');
+        applySelectedImage(await readFileAsDataUrl(imageBlob));
+      } catch (error) {
+        showUploadError(error.message);
+      }
     });
+
+    function readFileAsDataUrl(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error('Could not read this image. Please try another file.'));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function showUploadError(message) {
+      analysisError.textContent = message;
+      analysisError.classList.remove('hidden');
+    }
 
     function applySelectedImage(dataUrl) {
       state.imageDataUrl = dataUrl;
       state.imageSelected = true;
       state.analyzed = false;
+      analysisError.classList.add('hidden');
+
+      const previewImage = document.createElement('img');
+      previewImage.src = dataUrl;
+      previewImage.alt = 'Selected portrait';
+      previewImage.className = 'w-full h-full object-cover';
+
+      const replaceHint = document.createElement('span');
+      replaceHint.textContent = 'Tap to change photo';
+      replaceHint.className = 'absolute bottom-2 inset-x-2 bg-slate-900/80 text-white text-[11px] font-semibold py-1 px-2 rounded text-center';
+
+      triggerUploadBtn.className = 'w-full h-full max-h-[360px] rounded-2xl border border-slate-200 bg-slate-100 transition-all overflow-hidden relative cursor-pointer tap-highlight-none';
+      triggerUploadBtn.setAttribute('aria-label', 'Change portrait image');
+      triggerUploadBtn.replaceChildren(previewImage, replaceHint);
       
       // Update Button to enabled state
       mainActionBtn.disabled = false;
@@ -354,12 +377,13 @@
       }
     });
 
-    // Run AI analysis routine
-    function startAnalysis() {
+    // Analyze the selected portrait with Gemini through the server.
+    async function startAnalysis() {
       state.isAnalyzing = true;
       uploadView.classList.add('hidden');
       resultView.classList.add('hidden');
       loadingView.classList.remove('hidden');
+      loadingPhaseText.textContent = 'Evaluating composition & rule of thirds...';
 
       analyzingImgPreview.src = state.imageDataUrl;
       statusText.textContent = "Analyzing...";
@@ -371,34 +395,69 @@
       buttonText.textContent = "Analyzing Photographic Craft...";
       buttonIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />`;
 
-      // Animated multi-phase analysis simulation
       const phases = [
         "Evaluating composition & rule of thirds...",
-        "Measuring key-to-fill lighting ratio...",
-        "Assessing eye micro-contrast & focus plane...",
-        "Synthesizing constructive critique..."
+        "Assessing light, focus & framing...",
+        "Writing a constructive critique..."
       ];
 
       let phaseIdx = 0;
       const phaseInterval = setInterval(() => {
-        phaseIdx++;
-        if (phaseIdx < phases.length) {
-          loadingPhaseText.textContent = phases[phaseIdx];
-        }
-      }, 450);
+        phaseIdx = (phaseIdx + 1) % phases.length;
+        loadingPhaseText.textContent = phases[phaseIdx];
+      }, 1800);
 
-      setTimeout(() => {
+      try {
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ imageDataUrl: state.imageDataUrl })
+        });
+        if (!response.headers.get('content-type')?.includes('application/json')) {
+          throw new Error('The Gemini server was not reached. Run "npm start" in the project folder, then open http://127.0.0.1:3000 (not Live Server or a file:// page).');
+        }
+        let payload;
+        try {
+          payload = await response.json();
+        } catch {
+          throw new Error('The Gemini server returned invalid data. Restart it with "npm start" and try again.');
+        }
+        if (!response.ok) {
+          throw new Error(payload.error || 'Gemini could not analyze this image. Please try again.');
+        }
+        if (
+          !payload ||
+          typeof payload.score !== 'string' ||
+          typeof payload.grade !== 'string' ||
+          typeof payload.light !== 'string' ||
+          typeof payload.focus !== 'string' ||
+          typeof payload.critique !== 'string'
+        ) {
+          throw new Error('The Gemini server returned an incomplete critique. Restart it with "npm start" and try again.');
+        }
+        finishAnalysis(payload);
+      } catch (error) {
+        state.isAnalyzing = false;
+        state.analyzed = false;
+        loadingView.classList.add('hidden');
+        uploadView.classList.remove('hidden');
+        statusText.textContent = "Analysis Failed";
+        statusBadge.className = "inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-[10px] font-mono font-medium";
+        mainActionBtn.disabled = false;
+        mainActionBtn.className = "w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all bg-accent text-white hover:bg-accent-dark shadow-sm cursor-pointer tap-highlight-none active:scale-[0.99]";
+        buttonText.textContent = "Try Again";
+        const message = error instanceof TypeError
+          ? 'Could not reach the Gemini server. Run "npm start" in the project folder, then open http://127.0.0.1:3000.'
+          : error.message;
+        showUploadError(message || 'Gemini could not analyze this image. Please try again.');
+      } finally {
         clearInterval(phaseInterval);
-        finishAnalysis();
-      }, 1900);
+      }
     }
 
-    function finishAnalysis() {
+    function finishAnalysis(result) {
       state.isAnalyzing = false;
       state.analyzed = true;
-
-      // Pick evaluation result
-      const result = PHOTOGRAPHY_EVALUATIONS[Math.floor(Math.random() * PHOTOGRAPHY_EVALUATIONS.length)];
       state.results = result;
 
       // Populate Result DOM

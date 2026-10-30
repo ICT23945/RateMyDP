@@ -1,0 +1,12 @@
+{
+  "name": "rate-my-dp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gemini-powered portrait photography critique",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node --env-file=.env server.js"
+  }
+}
