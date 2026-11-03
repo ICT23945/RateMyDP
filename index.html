@@ -2,18 +2,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Rate My DP</title>
+  <script>document.documentElement.lang = 'si';</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-  <link href="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Noto Sans Sinhala"', '"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace']
           },
           colors: {
@@ -40,6 +41,12 @@
       -webkit-font-smoothing: antialiased;
     }
     .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    .critique-scroll {
+      min-height: 0;
+      max-height: 100%;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
   </style>
 <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:"Space Grotesk", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.inset-x-0{left:0px;right:0px}.inset-x-2{left:0.5rem;right:0.5rem}.bottom-2{bottom:0.5rem}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-1{height:0.25rem}.h-1\.5{height:0.375rem}.h-14{height:3.5rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-\[290px\]{height:290px}.h-full{height:100%}.max-h-\[360px\]{max-height:360px}.w-1\.5{width:0.375rem}.w-14{width:3.5rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-\[124px\]{width:124px}.w-full{width:100%}.max-w-\[210px\]{max-width:210px}.max-w-\[390px\]{max-width:390px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.animate-\[scan_1\.6s_ease-in-out_infinite\]{animation:scan 1.6s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-accent{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/50{border-color:rgb(226 232 240 / 0.5)}.border-slate-200\/60{border-color:rgb(226 232 240 / 0.6)}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-t-transparent{border-top-color:transparent}.bg-accent{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.bg-accent\/10{background-color:rgb(30 64 175 / 0.1)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-slate-50\/70{background-color:rgb(248 250 252 / 0.7)}.bg-slate-50\/80{background-color:rgb(248 250 252 / 0.8)}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.stroke-\[2\.2\]{stroke-width:2.2}.object-cover{object-fit:cover}.p-0{padding:0px}.p-3{padding:0.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.font-mono{font-family:"Space Grotesk", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.38\]{line-height:1.38}.leading-none{line-height:1}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wider{letter-spacing:0.05em}.text-accent{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.underline-offset-2{text-underline-offset:2px}.opacity-0{opacity:0}.shadow-\[0_0_8px_\#1e40af\]{--tw-shadow:0 0 8px #1e40af;--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-accent\/40:hover{border-color:rgb(30 64 175 / 0.4)}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-accent-dark:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:h-\[844px\]{height:844px}.sm\:rounded-\[36px\]{border-radius:36px}.sm\:border{border-width:1px}.sm\:border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.sm\:p-4{padding:1rem}.sm\:shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:"Space Grotesk", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.inset-x-0{left:0px;right:0px}.inset-x-2{left:0.5rem;right:0.5rem}.bottom-2{bottom:0.5rem}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-1{height:0.25rem}.h-1\.5{height:0.375rem}.h-14{height:3.5rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-\[290px\]{height:290px}.h-full{height:100%}.max-h-\[360px\]{max-height:360px}.w-1\.5{width:0.375rem}.w-14{width:3.5rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-\[124px\]{width:124px}.w-full{width:100%}.max-w-\[210px\]{max-width:210px}.max-w-\[390px\]{max-width:390px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.animate-\[scan_1\.6s_ease-in-out_infinite\]{animation:scan 1.6s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-accent{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/50{border-color:rgb(226 232 240 / 0.5)}.border-slate-200\/60{border-color:rgb(226 232 240 / 0.6)}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-t-transparent{border-top-color:transparent}.bg-accent{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.bg-accent\/10{background-color:rgb(30 64 175 / 0.1)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-slate-50\/70{background-color:rgb(248 250 252 / 0.7)}.bg-slate-50\/80{background-color:rgb(248 250 252 / 0.8)}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.stroke-\[2\.2\]{stroke-width:2.2}.object-cover{object-fit:cover}.p-0{padding:0px}.p-3{padding:0.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.font-mono{font-family:"Space Grotesk", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.38\]{line-height:1.38}.leading-none{line-height:1}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wider{letter-spacing:0.05em}.text-accent{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.underline-offset-2{text-underline-offset:2px}.opacity-0{opacity:0}.shadow-\[0_0_8px_\#1e40af\]{--tw-shadow:0 0 8px #1e40af;--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-accent\/40:hover{border-color:rgb(30 64 175 / 0.4)}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-accent-dark:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:h-\[844px\]{height:844px}.sm\:rounded-\[36px\]{border-radius:36px}.sm\:border{border-width:1px}.sm\:border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.sm\:p-4{padding:1rem}.sm\:shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:"Space Grotesk", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.inset-x-0{left:0px;right:0px}.inset-x-2{left:0.5rem;right:0.5rem}.bottom-2{bottom:0.5rem}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-1{height:0.25rem}.h-1\.5{height:0.375rem}.h-14{height:3.5rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-\[290px\]{height:290px}.h-full{height:100%}.max-h-\[360px\]{max-height:360px}.w-1\.5{width:0.375rem}.w-14{width:3.5rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-\[124px\]{width:124px}.w-full{width:100%}.max-w-\[210px\]{max-width:210px}.max-w-\[390px\]{max-width:390px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.animate-\[scan_1\.6s_ease-in-out_infinite\]{animation:scan 1.6s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-accent{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/50{border-color:rgb(226 232 240 / 0.5)}.border-slate-200\/60{border-color:rgb(226 232 240 / 0.6)}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-t-transparent{border-top-color:transparent}.bg-accent{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.bg-accent\/10{background-color:rgb(30 64 175 / 0.1)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-slate-50\/70{background-color:rgb(248 250 252 / 0.7)}.bg-slate-50\/80{background-color:rgb(248 250 252 / 0.8)}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.stroke-\[2\.2\]{stroke-width:2.2}.object-cover{object-fit:cover}.p-0{padding:0px}.p-3{padding:0.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.font-mono{font-family:"Space Grotesk", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.38\]{line-height:1.38}.leading-none{line-height:1}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wider{letter-spacing:0.05em}.text-accent{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.underline-offset-2{text-underline-offset:2px}.opacity-0{opacity:0}.shadow-\[0_0_8px_\#1e40af\]{--tw-shadow:0 0 8px #1e40af;--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-accent\/40:hover{border-color:rgb(30 64 175 / 0.4)}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-accent-dark:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:h-\[844px\]{height:844px}.sm\:rounded-\[36px\]{border-radius:36px}.sm\:border{border-width:1px}.sm\:border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.sm\:p-4{padding:1rem}.sm\:shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}</style></head>
 <body class="flex justify-center items-center h-full bg-slate-100 p-0 sm:p-4 select-none" data-mode="connect">
@@ -56,13 +63,18 @@
           </div>
           <h1 class="text-base font-bold tracking-tight text-slate-900 leading-none">Rate My DP&nbsp;</h1>
         </div>
-        <p class="text-[11px] font-medium text-slate-400 mt-0.5 tracking-tight">AI Portrait Photography Critic</p>
+        <p id="appSubtitle" class="text-[11px] font-medium text-slate-400 mt-0.5 tracking-tight">AI මඟින් Portrait Photography ඇගයීම</p>
       </div>
 
-      <!-- State Indicator Pill -->
-      <div id="statusBadge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 text-[10px] font-mono font-medium">
-        <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
-        <span id="statusText">Ready</span>
+      <div class="flex flex-col items-end gap-1.5">
+        <div id="languageSelector" role="group" aria-label="Language" class="inline-flex rounded-md border border-slate-200 bg-slate-50 p-0.5 text-[10px] font-semibold">
+          <button id="englishLanguageBtn" type="button" aria-pressed="false" class="rounded px-2 py-1 text-slate-500">EN</button>
+          <button id="sinhalaLanguageBtn" type="button" aria-pressed="true" class="rounded px-2 py-1 bg-white text-accent shadow-sm">සිංlish</button>
+        </div>
+        <div id="statusBadge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 text-[10px] font-mono font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+          <span id="statusText">සූදානම්</span>
+        </div>
       </div>
     </header>
 
@@ -85,19 +97,19 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
             </svg>
           </div>
-          <span class="text-sm font-semibold text-slate-800">Upload Portrait</span>
-          <span class="text-[11px] text-slate-400 mt-1 max-w-[210px] leading-snug">Tap to choose JPEG, PNG, or WebP from your device</span>
+          <span id="uploadTitle" class="text-sm font-semibold text-slate-800">Portrait එකක් Upload කරන්න</span>
+          <span id="uploadHint" class="text-[11px] text-slate-400 mt-1 max-w-[210px] leading-snug">ඔබගේ device එකෙන් JPEG, PNG හෝ WebP image එකක් තෝරන්න</span>
           
-          <div class="mt-4 px-2.5 py-1 rounded-md bg-white/90 border border-slate-200/50 text-[10px] text-slate-500 font-medium">
-            Evaluates optics &amp; lighting • Not personal looks
+          <div id="uploadPolicy" class="mt-4 px-2.5 py-1 rounded-md bg-white/90 border border-slate-200/50 text-[10px] text-slate-500 font-medium">
+            Optics, lighting සහ composition බලයි • පෙනුම ඇගයීමක් නොවේ
           </div>
         </button>
 
         <!-- Quick Sample Preset link for immediate testing -->
         <div class="mt-3 flex items-center gap-1.5 text-[11px] text-slate-400">
-          <span>Or test with:</span>
+          <span id="samplePrefix">නැත්නම් මෙයින් බලන්න:</span>
           <button id="loadSampleBtn" type="button" class="text-accent font-semibold underline underline-offset-2 hover:text-accent-dark">
-            Sample Portrait
+            <span id="sampleLabel">Sample Portrait</span>
           </button>
         </div>
       </div>
@@ -116,9 +128,9 @@
 
         <div class="flex items-center gap-2 mb-1.5">
           <div class="w-4 h-4 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
-          <h2 class="text-sm font-bold text-slate-900">Evaluating Optics...</h2>
+          <h2 id="loadingTitle" class="text-sm font-bold text-slate-900">Optics පරීක්ෂා කරමින්...</h2>
         </div>
-        <p id="loadingPhaseText" class="text-[12px] text-slate-500 font-mono transition-opacity">Examining composition &amp; rule of thirds</p>
+        <p id="loadingPhaseText" class="text-[12px] text-slate-500 font-mono transition-opacity">Composition සහ rule of thirds පරීක්ෂා කරමින්</p>
       </div>
 
       <!-- ============================================== -->
@@ -140,7 +152,7 @@
 
             <!-- Tap to change overlay -->
             <button id="replacePhotoBtn" type="button" class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-[11px] font-semibold transition-opacity tap-highlight-none">
-              Change
+              <span id="replacePhotoLabel">වෙනස් කරන්න</span>
             </button>
           </div>
 
@@ -150,33 +162,33 @@
             <!-- Top Right: Score Hero -->
             <div class="flex items-center justify-between pb-2 border-b border-slate-200/60">
               <div>
-                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-400 block">Overall Score</span>
+                <span id="overallScoreLabel" class="text-[9px] uppercase tracking-wider font-bold text-slate-400 block">මුළු Score එක</span>
                 <div class="flex items-baseline gap-1 mt-0.5">
                   <span id="scoreValue" class="text-2xl font-mono font-extrabold text-accent leading-none">7.8</span>
                   <span class="text-xs font-mono font-semibold text-slate-400">/ 10</span>
                 </div>
               </div>
               <div id="scoreGradeBadge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-accent/10 text-accent">
-                Balanced
+                සමබරයි
               </div>
             </div>
 
             <!-- Middle Right: Short Photographic Critique (2-4 sentences max, clean scroll-free text) -->
-            <div class="my-auto py-1">
+            <div class="critique-scroll my-auto py-1">
               <span class="text-[9px] font-bold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1">
                 <svg class="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                AI Critique
+                <span id="critiqueTitle">AI අදහස</span>
               </span>
               <p id="critiqueCommentText" class="text-[11.5px] leading-[1.38] text-slate-700 font-normal">
-                Strong natural directional lighting creates soft facial dimension with pleasing eye catchlights. Headroom is slightly tight; raising camera distance creates balanced breathing room.
+                ස්වාභාවික lighting නිසා portrait එකට ලස්සන depth එකක් ලැබිලා තියෙනවා. Headroom ටිකක් අඩුයි; camera එක තව ටිකක් ඈත් කළොත් framing එක වඩා සමබර වෙයි.
               </p>
             </div>
 
             <!-- Bottom Right: Quick Micro-Metrics tags -->
             <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-[10px] font-mono text-slate-500">
-              <span id="lightMetricTag">Light: 8.5/10</span>
+              <span id="lightMetricTag">Lighting: 8.5/10</span>
               <span id="focusMetricTag">Focus: 8.0/10</span>
             </div>
 
@@ -185,7 +197,7 @@
 
         <!-- Feedback copied toast (Inline alert) -->
         <div id="copyToast" class="hidden text-center py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-lg text-[10px] font-semibold transition-all">
-          ✓ Critique and score copied to clipboard!
+          ✓ අදහස සහ Score එක clipboard එකට පිටපත් කළා!
         </div>
 
         <!-- Quick action helpers -->
@@ -194,7 +206,7 @@
             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
             </svg>
-            <span>Copy Feedback</span>
+            <span id="copyFeedbackLabel">Feedback පිටපත් කරන්න</span>
           </button>
           <span class="text-[10px] text-slate-400 font-mono">Gemini 3.8 Flash</span>
         </div>
@@ -210,12 +222,12 @@
         <svg id="buttonIcon" class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
-        <span id="buttonText">Analyze Portrait</span>
+        <span id="buttonText">Portrait එක Analyze කරන්න</span>
       </button>
 
       <!-- Privacy footnote -->
-      <p class="text-center text-[10px] text-slate-400 mt-2 font-medium tracking-tight">
-        Sent to Gemini for analysis; not shared socially. <br>- Charitha Chandana -
+      <p id="privacyNotice" class="text-center text-[10px] text-slate-400 mt-2 font-medium tracking-tight">
+        Analysis සඳහා Gemini වෙත යවයි; වෙනත් අය සමඟ share කරන්නේ නැහැ.<br>- Charitha Chandana -
       </p>
       <!--p class="text-center text-[10px] text-slate-400 mt-2 font-medium tracking-tight">
         Charitha Chandana
@@ -239,10 +251,37 @@
       imageDataUrl: null,
       isAnalyzing: false,
       analyzed: false,
-      results: null
+      results: null,
+      analysisPhaseIndex: 0,
+      analysisFailed: false
+    };
+    let appLanguage = localStorage.getItem('rateMyDpLanguage') === 'en' ? 'en' : 'si';
+    const languageText = {
+      en: {
+        subtitle: 'AI Portrait Photography Critic', ready: 'Ready', imageReady: 'Image Ready', analyzing: 'Analyzing...', failed: 'Analysis Failed', complete: 'Critique Complete',
+        uploadTitle: 'Upload Portrait', uploadHint: 'Tap to choose a JPEG, PNG, or WebP image from your device', uploadPolicy: 'Evaluates optics & lighting • Not personal looks', samplePrefix: 'Or try:', sample: 'Sample Portrait',
+        loadingTitle: 'Evaluating optics...', phaseOne: 'Examining composition & rule of thirds', phaseTwo: 'Assessing lighting, focus & framing', phaseThree: 'Writing a constructive critique',
+        replace: 'Change', score: 'Overall Score', critiqueTitle: 'AI Critique', grade: 'Balanced', critique: 'Strong natural directional lighting creates soft facial dimension. Headroom is slightly tight; raising camera distance would create more balanced framing.',
+        light: 'Lighting', focus: 'Focus', copied: '✓ Critique and score copied to clipboard!', copy: 'Copy Feedback', privacy: 'Sent to Gemini for analysis; not shared socially.',
+        analyze: 'Analyze Portrait', analyzingButton: 'Analyzing photography...', retry: 'Try Again', another: 'Analyze Another Photo',
+        chooseImage: 'Choose a JPEG, PNG, or WebP image.', imageTooLarge: 'Choose an image smaller than 8 MB.', sampleError: 'Could not load the sample portrait. Please upload a photo instead.', sampleTooLarge: 'The sample portrait is larger than 8 MB.', readError: 'Could not read this image. Please try another file.',
+        serverError: 'Could not reach the Gemini server. Run "npm start" in the project folder, then open http://127.0.0.1:3000.', invalidData: 'The Gemini server returned invalid data. Restart it with "npm start" and try again.', analysisError: 'Gemini could not analyze this image. Please try again.', incomplete: 'The Gemini server returned an incomplete critique. Restart it with "npm start" and try again.'
+      },
+      si: {
+        subtitle: 'AI මඟින් Portrait Photography ඇගයීම', ready: 'සූදානම්', imageReady: 'Image එක සූදානම්', analyzing: 'Analyze කරමින්...', failed: 'Analysis අසාර්ථකයි', complete: 'ඇගයීම සම්පූර්ණයි',
+        uploadTitle: 'Portrait එකක් Upload කරන්න', uploadHint: 'ඔබගේ device එකෙන් JPEG, PNG හෝ WebP image එකක් තෝරන්න', uploadPolicy: 'Optics, lighting සහ composition බලයි • පෙනුම ඇගයීමක් නොවේ', samplePrefix: 'නැත්නම් මෙයින් බලන්න:', sample: 'උදාහරණ Portrait එක',
+        loadingTitle: 'Optics පරීක්ෂා කරමින්...', phaseOne: 'Composition සහ rule of thirds පරීක්ෂා කරමින්', phaseTwo: 'Lighting, focus සහ framing බලමින්', phaseThree: 'ප්‍රයෝජනවත් අදහසක් සකස් කරමින්',
+        replace: 'වෙනස් කරන්න', score: 'මුළු Score එක', critiqueTitle: 'AI අදහස', grade: 'සමබරයි', critique: 'ස්වාභාවික lighting නිසා portrait එකට ලස්සන depth එකක් ලැබිලා තියෙනවා. Headroom ටිකක් අඩුයි; camera එක තව ටිකක් ඈත් කළොත් framing එක වඩා සමබර වෙයි.',
+        light: 'Lighting', focus: 'Focus', copied: '✓ අදහස සහ Score එක clipboard එකට පිටපත් කළා!', copy: 'Feedback පිටපත් කරන්න', privacy: 'Analysis සඳහා Gemini වෙත යවයි; වෙනත් අය සමඟ share කරන්නේ නැහැ.',
+        analyze: 'Portrait එක Analyze කරන්න', analyzingButton: 'Photography විස්තර පරීක්ෂා කරමින්...', retry: 'නැවත උත්සාහ කරන්න', another: 'තවත් Photo එකක් Analyze කරන්න',
+        chooseImage: 'JPEG, PNG හෝ WebP image එකක් තෝරන්න.', imageTooLarge: '8 MB ට වඩා කුඩා image එකක් තෝරන්න.', sampleError: 'උදාහරණ Portrait එක load කරන්න බැරි වුණා. Photo එකක් Upload කරන්න.', sampleTooLarge: 'උදාහරණ Portrait එක 8 MB ට වඩා විශාලයි.', readError: 'මේ image එක කියවන්න බැරි වුණා. වෙනත් file එකක් උත්සාහ කරන්න.',
+        serverError: 'Gemini server එකට සම්බන්ධ වුණේ නැහැ. Project folder එකේ "npm start" run කර http://127.0.0.1:3000 විවෘත කරන්න.', invalidData: 'Gemini server එකෙන් වැරදි data ලැබුණා. "npm start" මඟින් නැවත ආරම්භ කර උත්සාහ කරන්න.', analysisError: 'Geminiට මේ image එක Analyze කරන්න බැරි වුණා. නැවත උත්සාහ කරන්න.', incomplete: 'Gemini server එකෙන් ලැබුණු අදහස සම්පූර්ණ නැහැ. "npm start" මඟින් නැවත ආරම්භ කර උත්සාහ කරන්න.'
+      }
     };
 
     // DOM Elements
+    const englishLanguageBtn = document.getElementById('englishLanguageBtn');
+    const sinhalaLanguageBtn = document.getElementById('sinhalaLanguageBtn');
     const fileInput = document.getElementById('portraitFileInput');
     const triggerUploadBtn = document.getElementById('triggerUploadBtn');
     const loadSampleBtn = document.getElementById('loadSampleBtn');
@@ -274,6 +313,79 @@
     const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
     const SAMPLE_PORTRAIT_URL = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
 
+    function currentText() {
+      return languageText[appLanguage];
+    }
+
+    function localizeServerError(message) {
+      if (appLanguage === 'en') return message;
+      if (/smaller than 8 MB/i.test(message)) return currentText().imageTooLarge;
+      if (/JPEG, PNG, or WebP/i.test(message)) return currentText().chooseImage;
+      if (/connect to Gemini/i.test(message)) return currentText().serverError;
+      return currentText().analysisError;
+    }
+
+    function applyLanguage() {
+      const text = currentText();
+      const labels = {
+        appSubtitle: 'subtitle', uploadTitle: 'uploadTitle', uploadHint: 'uploadHint', uploadPolicy: 'uploadPolicy',
+        samplePrefix: 'samplePrefix', sampleLabel: 'sample', loadingTitle: 'loadingTitle', replacePhotoLabel: 'replace',
+        overallScoreLabel: 'score', critiqueTitle: 'critiqueTitle', copyFeedbackLabel: 'copy', privacyNotice: 'privacy'
+      };
+      Object.entries(labels).forEach(([elementId, textKey]) => {
+        const element = document.getElementById(elementId);
+        if (element) element.textContent = text[textKey];
+      });
+      document.documentElement.lang = appLanguage;
+      document.getElementById('languageSelector').setAttribute('aria-label', appLanguage === 'en' ? 'Language' : 'භාෂාව / Language');
+      englishLanguageBtn.setAttribute('aria-pressed', String(appLanguage === 'en'));
+      sinhalaLanguageBtn.setAttribute('aria-pressed', String(appLanguage === 'si'));
+      englishLanguageBtn.className = appLanguage === 'en'
+        ? 'rounded px-2 py-1 bg-white text-accent shadow-sm'
+        : 'rounded px-2 py-1 text-slate-500';
+      sinhalaLanguageBtn.className = appLanguage === 'si'
+        ? 'rounded px-2 py-1 bg-white text-accent shadow-sm'
+        : 'rounded px-2 py-1 text-slate-500';
+      copyToast.textContent = text.copied;
+      if (state.imageSelected) {
+        triggerUploadBtn.setAttribute('aria-label', appLanguage === 'en' ? 'Change portrait image' : 'Portrait image එක වෙනස් කරන්න');
+        const replaceHint = triggerUploadBtn.querySelector('span');
+        if (replaceHint) replaceHint.textContent = appLanguage === 'en' ? 'Tap to change photo' : 'Photo එක වෙනස් කිරීමට tap කරන්න';
+      }
+
+      if (state.isAnalyzing) {
+        statusText.textContent = text.analyzing;
+        buttonText.textContent = text.analyzingButton;
+        loadingPhaseText.textContent = text[['phaseOne', 'phaseTwo', 'phaseThree'][state.analysisPhaseIndex || 0]];
+      } else if (state.analyzed && state.results) {
+        statusText.textContent = text.complete;
+        buttonText.textContent = text.another;
+        scoreGradeBadge.textContent = state.results[appLanguage === 'en' ? 'gradeEnglish' : 'gradeSinhala'];
+        critiqueCommentText.textContent = state.results[appLanguage === 'en' ? 'critiqueEnglish' : 'critiqueSinhala'];
+        lightMetricTag.textContent = `${text.light}: ${state.results.light}/10`;
+        focusMetricTag.textContent = `${text.focus}: ${state.results.focus}/10`;
+      } else if (state.analysisFailed) {
+        statusText.textContent = text.failed;
+        buttonText.textContent = text.retry;
+      } else if (state.imageSelected) {
+        statusText.textContent = text.imageReady;
+        buttonText.textContent = text.analyze;
+      } else {
+        statusText.textContent = text.ready;
+        buttonText.textContent = text.analyze;
+      }
+    }
+
+    function changeLanguage(language) {
+      appLanguage = language;
+      localStorage.setItem('rateMyDpLanguage', language);
+      applyLanguage();
+    }
+
+    englishLanguageBtn.addEventListener('click', () => changeLanguage('en'));
+    sinhalaLanguageBtn.addEventListener('click', () => changeLanguage('si'));
+    applyLanguage();
+
     // Trigger local device file picker
     function openFilePicker() {
       fileInput.value = '';
@@ -288,11 +400,11 @@
       const file = e.target.files && e.target.files[0];
       if (!file) return;
       if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-        showUploadError('Choose a JPEG, PNG, or WebP image.');
+        showUploadError(currentText().chooseImage);
         return;
       }
       if (file.size > MAX_IMAGE_BYTES) {
-        showUploadError('Choose an image smaller than 8 MB.');
+        showUploadError(currentText().imageTooLarge);
         return;
       }
       try {
@@ -306,9 +418,9 @@
     loadSampleBtn.addEventListener('click', async function() {
       try {
         const response = await fetch(SAMPLE_PORTRAIT_URL);
-        if (!response.ok) throw new Error('Could not load the sample portrait. Please upload a photo instead.');
+        if (!response.ok) throw new Error(currentText().sampleError);
         const imageBlob = await response.blob();
-        if (imageBlob.size > MAX_IMAGE_BYTES) throw new Error('The sample portrait is larger than 8 MB.');
+        if (imageBlob.size > MAX_IMAGE_BYTES) throw new Error(currentText().sampleTooLarge);
         applySelectedImage(await readFileAsDataUrl(imageBlob));
       } catch (error) {
         showUploadError(error.message);
@@ -319,7 +431,7 @@
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = () => resolve(reader.result);
-        reader.onerror = () => reject(new Error('Could not read this image. Please try another file.'));
+        reader.onerror = () => reject(new Error(currentText().readError));
         reader.readAsDataURL(file);
       });
     }
@@ -333,29 +445,29 @@
       state.imageDataUrl = dataUrl;
       state.imageSelected = true;
       state.analyzed = false;
+      state.analysisFailed = false;
       analysisError.classList.add('hidden');
 
       const previewImage = document.createElement('img');
       previewImage.src = dataUrl;
-      previewImage.alt = 'Selected portrait';
+      previewImage.alt = appLanguage === 'en' ? 'Selected portrait' : 'තෝරාගත් Portrait එක';
       previewImage.className = 'w-full h-full object-cover';
 
       const replaceHint = document.createElement('span');
-      replaceHint.textContent = 'Tap to change photo';
+      replaceHint.textContent = appLanguage === 'en' ? 'Tap to change photo' : 'Photo එක වෙනස් කිරීමට tap කරන්න';
       replaceHint.className = 'absolute bottom-2 inset-x-2 bg-slate-900/80 text-white text-[11px] font-semibold py-1 px-2 rounded text-center';
 
       triggerUploadBtn.className = 'w-full h-full max-h-[360px] rounded-2xl border border-slate-200 bg-slate-100 transition-all overflow-hidden relative cursor-pointer tap-highlight-none';
-      triggerUploadBtn.setAttribute('aria-label', 'Change portrait image');
+      triggerUploadBtn.setAttribute('aria-label', appLanguage === 'en' ? 'Change portrait image' : 'Portrait image එක වෙනස් කරන්න');
       triggerUploadBtn.replaceChildren(previewImage, replaceHint);
       
       // Update Button to enabled state
       mainActionBtn.disabled = false;
       mainActionBtn.className = "w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all bg-accent text-white hover:bg-accent-dark shadow-sm cursor-pointer tap-highlight-none active:scale-[0.99]";
-      buttonText.textContent = "Analyze Portrait";
       buttonIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />`;
 
       // Update badge
-      statusText.textContent = "Image Ready";
+      applyLanguage();
       statusBadge.className = "inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-50 text-accent text-[10px] font-mono font-medium";
 
       // If we are currently in result view, immediately re-analyze or show preview
@@ -380,31 +492,24 @@
     // Analyze the selected portrait with Gemini through the server.
     async function startAnalysis() {
       state.isAnalyzing = true;
+      state.analysisFailed = false;
+      state.analysisPhaseIndex = 0;
       uploadView.classList.add('hidden');
       resultView.classList.add('hidden');
       loadingView.classList.remove('hidden');
-      loadingPhaseText.textContent = 'Evaluating composition & rule of thirds...';
+      applyLanguage();
 
       analyzingImgPreview.src = state.imageDataUrl;
-      statusText.textContent = "Analyzing...";
       statusBadge.className = "inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-mono font-medium";
 
       // Disable button during loading
       mainActionBtn.disabled = true;
       mainActionBtn.className = "w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all bg-slate-200 text-slate-400 cursor-not-allowed";
-      buttonText.textContent = "Analyzing Photographic Craft...";
       buttonIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />`;
 
-      const phases = [
-        "Evaluating composition & rule of thirds...",
-        "Assessing light, focus & framing...",
-        "Writing a constructive critique..."
-      ];
-
-      let phaseIdx = 0;
       const phaseInterval = setInterval(() => {
-        phaseIdx = (phaseIdx + 1) % phases.length;
-        loadingPhaseText.textContent = phases[phaseIdx];
+        state.analysisPhaseIndex = (state.analysisPhaseIndex + 1) % 3;
+        applyLanguage();
       }, 1800);
 
       try {
@@ -414,42 +519,44 @@
           body: JSON.stringify({ imageDataUrl: state.imageDataUrl })
         });
         if (!response.headers.get('content-type')?.includes('application/json')) {
-          throw new Error('The Gemini server was not reached. Run "npm start" in the project folder, then open http://127.0.0.1:3000 (not Live Server or a file:// page).');
+          throw new Error(currentText().serverError);
         }
         let payload;
         try {
           payload = await response.json();
         } catch {
-          throw new Error('The Gemini server returned invalid data. Restart it with "npm start" and try again.');
+          throw new Error(currentText().invalidData);
         }
         if (!response.ok) {
-          throw new Error(payload.error || 'Gemini could not analyze this image. Please try again.');
+          throw new Error(localizeServerError(payload.error || currentText().analysisError));
         }
         if (
           !payload ||
           typeof payload.score !== 'string' ||
-          typeof payload.grade !== 'string' ||
+          typeof payload.gradeEnglish !== 'string' ||
+          typeof payload.gradeSinhala !== 'string' ||
           typeof payload.light !== 'string' ||
           typeof payload.focus !== 'string' ||
-          typeof payload.critique !== 'string'
+          typeof payload.critiqueEnglish !== 'string' ||
+          typeof payload.critiqueSinhala !== 'string'
         ) {
-          throw new Error('The Gemini server returned an incomplete critique. Restart it with "npm start" and try again.');
+          throw new Error(currentText().incomplete);
         }
         finishAnalysis(payload);
       } catch (error) {
         state.isAnalyzing = false;
         state.analyzed = false;
+        state.analysisFailed = true;
         loadingView.classList.add('hidden');
         uploadView.classList.remove('hidden');
-        statusText.textContent = "Analysis Failed";
         statusBadge.className = "inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-[10px] font-mono font-medium";
         mainActionBtn.disabled = false;
         mainActionBtn.className = "w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all bg-accent text-white hover:bg-accent-dark shadow-sm cursor-pointer tap-highlight-none active:scale-[0.99]";
-        buttonText.textContent = "Try Again";
         const message = error instanceof TypeError
-          ? 'Could not reach the Gemini server. Run "npm start" in the project folder, then open http://127.0.0.1:3000.'
+          ? currentText().serverError
           : error.message;
-        showUploadError(message || 'Gemini could not analyze this image. Please try again.');
+        applyLanguage();
+        showUploadError(message || currentText().analysisError);
       } finally {
         clearInterval(phaseInterval);
       }
@@ -458,38 +565,36 @@
     function finishAnalysis(result) {
       state.isAnalyzing = false;
       state.analyzed = true;
+      state.analysisFailed = false;
       state.results = result;
 
       // Populate Result DOM
       resultImagePreview.src = state.imageDataUrl;
       scoreValue.textContent = result.score;
-      scoreGradeBadge.textContent = result.grade;
-      critiqueCommentText.textContent = result.critique;
-      lightMetricTag.textContent = `Light: ${result.light}/10`;
-      focusMetricTag.textContent = `Focus: ${result.focus}/10`;
 
       // Show Result View
       loadingView.classList.add('hidden');
       resultView.classList.remove('hidden');
 
       // Update Header Badge
-      statusText.textContent = "Critique Complete";
       statusBadge.className = "inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-medium";
 
       // Transform button to "Analyze Another Photo"
       mainActionBtn.disabled = false;
       mainActionBtn.className = "w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all bg-slate-900 text-white hover:bg-slate-800 shadow-sm cursor-pointer tap-highlight-none";
-      buttonText.textContent = "Analyze Another Photo";
       buttonIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />`;
+      applyLanguage();
     }
 
     // Copy Feedback to Clipboard
     copyFeedbackBtn.addEventListener('click', function() {
       if (!state.results) return;
-      const textToCopy = `RateMyDP Photography Evaluation:
-Score: ${state.results.score}/10 (${state.results.grade})
-Critique: ${state.results.critique}
-(Evaluated purely on photography principles: lighting, composition, focus & framing)`;
+      const english = appLanguage === 'en';
+      const grade = state.results[english ? 'gradeEnglish' : 'gradeSinhala'];
+      const critique = state.results[english ? 'critiqueEnglish' : 'critiqueSinhala'];
+      const textToCopy = english
+        ? `RateMyDP Photography Evaluation:\nScore: ${state.results.score}/10 (${grade})\nCritique: ${critique}\n(Evaluated on photography principles: lighting, composition, focus & framing)`
+        : `RateMyDP Photography ඇගයීම:\nScore: ${state.results.score}/10 (${grade})\nAI අදහස: ${critique}\n(Photography මූලධර්ම: lighting, composition, focus සහ framing)`;
 
       navigator.clipboard.writeText(textToCopy).then(() => {
         copyToast.classList.remove('hidden');

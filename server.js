@@ -132,22 +132,30 @@ function parseEvaluation(outputText) {
     score === null ||
     light === null ||
     focus === null ||
-    typeof evaluation.grade !== 'string' ||
-    !evaluation.grade.trim() ||
-    evaluation.grade.length > 40 ||
-    typeof evaluation.critique !== 'string' ||
-    !evaluation.critique.trim() ||
-    evaluation.critique.length > 500
+    typeof evaluation.gradeEnglish !== 'string' ||
+    !evaluation.gradeEnglish.trim() ||
+    evaluation.gradeEnglish.length > 40 ||
+    typeof evaluation.gradeSinhala !== 'string' ||
+    !evaluation.gradeSinhala.trim() ||
+    evaluation.gradeSinhala.length > 40 ||
+    typeof evaluation.critiqueEnglish !== 'string' ||
+    !evaluation.critiqueEnglish.trim() ||
+    evaluation.critiqueEnglish.length > 500 ||
+    typeof evaluation.critiqueSinhala !== 'string' ||
+    !evaluation.critiqueSinhala.trim() ||
+    evaluation.critiqueSinhala.length > 500
   ) {
     throw new HttpError(502, 'Gemini returned an incomplete critique. Please try again.');
   }
 
   return {
     score: score.toFixed(1),
-    grade: evaluation.grade.trim(),
+    gradeEnglish: evaluation.gradeEnglish.trim(),
+    gradeSinhala: evaluation.gradeSinhala.trim(),
     light: light.toFixed(1),
     focus: focus.toFixed(1),
-    critique: evaluation.critique.trim()
+    critiqueEnglish: evaluation.critiqueEnglish.trim(),
+    critiqueSinhala: evaluation.critiqueSinhala.trim()
   };
 }
 
@@ -156,7 +164,7 @@ async function analyzeImage(image) {
     'Evaluate this portrait as photography, not as a judgment of the person.',
     'Assess only composition, lighting, focus, and framing. Do not identify the person or infer attractiveness, age, ethnicity, gender, personality, or other sensitive traits.',
     'Give an overall photography score and separate lighting and focus scores from 0 to 10. Be fair, specific, and constructive. If an aspect cannot be judged, reflect that uncertainty in the score and critique.',
-    'Return only a JSON object with exactly these fields: score (number), grade (short string), light (number), focus (number), critique (2-3 concise sentences). Do not use markdown.'
+    'Return one JSON object with exactly these fields: score (number), gradeEnglish (short English string), gradeSinhala (short, conversational Sinhala-English string using Sinhala script for Sinhala words, e.g. "මදි වගේ"), light (number), focus (number), critiqueEnglish (2-3 concise English sentences), critiqueSinhala (2-3 concise sentences in simple, conversational Sinhala mixed naturally with familiar English photography terms). In gradeSinhala and critiqueSinhala, write Sinhala words in Sinhala script, never transliterate them into Latin letters. Keep technical terms such as photography, lighting, composition, focus, framing, exposure, and background in English. Example style: "Lighting එක හරිම flat වගේ. Composition එක හොඳයි, නමුත් focus එක තව ටිකක් sharp වුණා නම් හොඳයි." Avoid formal or literary Sinhala. Do not use markdown.'
   ].join(' ');
 
   let response;
@@ -168,14 +176,14 @@ async function analyzeImage(image) {
         'x-goog-api-key': process.env.GEMINI_API_KEY
       },
       body: JSON.stringify({
-        model: 'gemini-3.8-flash',
+        model: 'gemini-3.5-flash-lite',
         store: false,
         input: [
           { type: 'text', text: prompt },
           { type: 'image', data: image.data, mime_type: image.mimeType }
         ]
       }),
-      signal: AbortSignal.timeout(60000)
+      signal: AbortSignal.timeout(240000)
     });
   } catch (error) {
     console.error('Gemini request could not be completed:', error.message);
